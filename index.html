@@ -442,7 +442,7 @@
             text-align: center;
         }
 
-        /* Experience Section */
+        /* Experience Section - UPDATED */
         .timeline {
             position: relative;
             max-width: 900px;
@@ -574,7 +574,7 @@
             width: 100%;
         }
 
-        /* Projects Section */
+        /* Projects Section - UPDATED with new projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -686,7 +686,7 @@
             width: 100%;
         }
 
-        /* Education Section */
+        /* Education Section - UPDATED */
         .education-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -759,7 +759,7 @@
             opacity: 0.9;
         }
 
-        /* Achievements Section */
+        /* Achievements Section - UPDATED */
         .achievements-container {
             max-width: 800px;
             margin: 0 auto;
@@ -816,7 +816,7 @@
             opacity: 0.9;
         }
 
-        /* Contact Section */
+        /* Contact Section - UPDATED */
         .contact-container {
             display: flex;
             gap: 4rem;
@@ -936,47 +936,41 @@
             opacity: 1;
         }
 
-        .form-group {
+        .contact-form h3 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
             margin-bottom: 2.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: 600;
             color: var(--primary);
-            font-size: clamp(1rem, 2.5vw, 1.1rem);
-            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 15px;
+            line-height: 1.3;
+            text-align: center;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1.2rem;
-            background-color: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            font-size: clamp(1rem, 2.5vw, 1.1rem);
-            transition: all 0.3s ease;
+        .contact-form h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+            box-shadow: var(--glow);
+        }
+
+        .contact-form p {
             color: var(--text);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            opacity: 0.9;
+            text-align: center;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(255, 94, 94, 0.2);
-            background-color: rgba(255,255,255,0.08);
-        }
-
-        .form-group textarea {
-            min-height: 200px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: linear-gradient(145deg, var(--primary), var(--accent));
-            color: var(--bg);
+        .whatsapp-btn {
+            background: linear-gradient(145deg, #25D366, #128C7E);
+            color: white;
             border: none;
             padding: 1.3rem 2.5rem;
             border-radius: 8px;
@@ -989,10 +983,16 @@
             text-transform: uppercase;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(255, 94, 94, 0.3);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            text-decoration: none;
+            text-align: center;
         }
 
-        .submit-btn::before {
+        .whatsapp-btn::before {
             content: '';
             position: absolute;
             top: 0;
@@ -1003,12 +1003,12 @@
             transition: 0.5s;
         }
 
-        .submit-btn:hover {
+        .whatsapp-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 94, 94, 0.4);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
 
-        .submit-btn:hover::before {
+        .whatsapp-btn:hover::before {
             left: 100%;
         }
 
@@ -1241,7 +1241,7 @@
         </div>
     </nav>
 
-    <!-- About Section -->
+    <!-- About Section - UPDATED SKILLS -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-title">
@@ -1249,9 +1249,9 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Building Intelligent Solutions for Tomorrow</h3>
-                    <p>I'm an AI/ML Engineer with a passion for creating innovative solutions that blend artificial intelligence with practical applications. My expertise spans across machine learning algorithms, deep learning architectures, and full-stack development.</p>
-                    <p>With a strong foundation in computer science and hands-on experience in developing cutting-edge technologies, I thrive on solving complex problems and transforming ideas into impactful digital experiences.</p>
+                    <h3>Software Development Engineer / Machine Learning Engineer</h3>
+                    <p>AI/ML Engineer with strong foundations in Data Structures, Algorithms, Object-Oriented Programming, Operating Systems, and System Design. Experienced in building scalable backend systems, real-time machine learning pipelines, and production-ready AI applications.</p>
+                    <p>Proficient in Java, Python, JavaScript, TensorFlow, and Docker. Passionate about solving complex problems and transforming ideas into impactful digital experiences.</p>
                     
                     <div class="skills-container">
                         <div class="skills-title">
@@ -1271,6 +1271,14 @@
                                 <div class="skill-name">JavaScript</div>
                             </div>
                             <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                                <div class="skill-name">React</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                                <div class="skill-name">Node.js</div>
+                            </div>
+                            <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-brain"></i></div>
                                 <div class="skill-name">TensorFlow</div>
                             </div>
@@ -1279,32 +1287,24 @@
                                 <div class="skill-name">scikit-learn</div>
                             </div>
                             <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                                <div class="skill-name">NumPy/Pandas</div>
+                            </div>
+                            <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-eye"></i></div>
                                 <div class="skill-name">OpenCV</div>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-server"></i></div>
-                                <div class="skill-name">Flask</div>
+                                <div class="skill-name">Docker</div>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                                <div class="skill-name">HTML/CSS</div>
+                                <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="skill-name">Git/REST APIs</div>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                                <div class="skill-name">Machine Learning</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                                <div class="skill-name">Deep Learning</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon"><i class="fas fa-camera"></i></div>
-                                <div class="skill-name">Computer Vision</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-icon"><i class="fas fa-language"></i></div>
-                                <div class="skill-name">NLP</div>
+                                <div class="skill-name">ML/DL</div>
                             </div>
                         </div>
                     </div>
@@ -1313,7 +1313,7 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience Section - UPDATED DATES & DETAILS -->
     <section id="experience" class="section">
         <div class="container">
             <div class="section-title">
@@ -1321,26 +1321,27 @@
             </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-dot"><i class="fas fa-brain"></i></div>
                     <div class="timeline-content">
-                        <div class="timeline-date"><i class="far fa-calendar-alt"></i> March 2025 - Present</div>
+                        <div class="timeline-date"><i class="far fa-calendar-alt"></i> March 2025 – May 2025</div>
                         <h3 class="timeline-title">Machine Learning Intern – Fox Trading Solutions</h3>
                         <p class="timeline-description">
-                            - Built and back-tested ML-based trading models to forecast stock price trends with high accuracy<br>
-                            - Developed automated prediction pipelines using Python and scikit-learn that reduced processing time significantly<br>
-                            - Implemented real-time data processing systems for high-frequency trading scenarios
+                            • Built end-to-end machine learning pipelines, improving prediction accuracy by <strong>18%</strong><br>
+                            • Designed asynchronous data processing workflows for near real-time inference, reducing model latency by <strong>25%</strong><br>
+                            • Optimized feature engineering and algorithm selection to improve throughput and system performance<br>
+                            • Worked in an agile development environment using Git-based version control
                         </p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
                     <div class="timeline-content">
-                        <div class="timeline-date"><i class="far fa-calendar-alt"></i> February 2025 - Present</div>
+                        <div class="timeline-date"><i class="far fa-calendar-alt"></i> January 2025 – March 2025</div>
                         <h3 class="timeline-title">Web Developer – Spandan TV</h3>
                         <p class="timeline-description">
-                            - Led the end-to-end development of a responsive website for a local entertainment channel<br>
-                            - Implemented modern UI/UX principles that increased user engagement<br>
-                            - Live site: <a href="https://pree-om.github.io/spandan-tv/index.html" target="_blank">https://pree-om.github.io/spandan-tv/index.html</a>
+                            • Led end-to-end development of a production website, improving page load time by <strong>30%</strong><br>
+                            • Improved usability, responsiveness, and maintainability through modular frontend architecture<br>
+                            • Live site: <a href="https://pree-om.github.io/spandan-tv/index.html" target="_blank">https://pree-om.github.io/spandan-tv/index.html</a>
                         </p>
                     </div>
                 </div>
@@ -1348,7 +1349,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section - UPDATED WITH NEW PROJECTS -->
     <section id="projects" class="section">
         <div class="container">
             <div class="section-title">
@@ -1360,16 +1361,54 @@
                         <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="SangRakshak AI">
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">SangRakshak AI - Women's Safety System</h3>
+                        <h3 class="project-title">SangRakshak AI — AI Powered Women's Safety System</h3>
                         <p class="project-description">
-                            An advanced AI system that analyzes video footage in real-time to detect potential threats to women's safety. The system identifies crowd density, violent activities, and gender distribution with high accuracy, sending instant alerts when dangerous situations are detected.
+                            • Designed real-time video analysis pipelines to detect crowd density and violent activities<br>
+                            • Implemented live CCTV stream ingestion with automated alert generation<br>
+                            • Simulated production-scale surveillance systems with real-time monitoring<br>
+                            • Tech: Computer Vision, OpenCV, TensorFlow, Real-Time Processing
                         </p>
                         <div class="project-links">
                             <a href="https://github.com/Pree-om/SangRakshak" target="_blank">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="#">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Sudarshan AI">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Sudarshan AI — Misinformation Detection Platform</h3>
+                        <p class="project-description">
+                            • Built multi-agent AI workflows for high-accuracy misinformation detection across text and image modalities<br>
+                            • Developed backend services using Node.js and PostgreSQL with containerized deployment<br>
+                            • Enabled scalable and modular AI pipelines for real-world misinformation analysis<br>
+                            • Tech: NLP, Computer Vision, Node.js, PostgreSQL, Docker
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Swasth AI">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Swasth AI — Agentic AI Powered Medical Emergency Platform</h3>
+                        <p class="project-description">
+                            • Architected agentic AI orchestration for GPS-based emergency detection and real-time doctor alerts<br>
+                            • Built a doctor-only human-in-the-loop AI council with compliance-aware decision support<br>
+                            • Implemented secure end-to-end healthcare automation with encrypted data flows and audit-ready reports<br>
+                            • Tech: Agentic AI, GPS Integration, Security Protocols, Healthcare Compliance
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -1381,52 +1420,14 @@
                     <div class="project-info">
                         <h3 class="project-title">Fintech Gringotts Trading Simulator</h3>
                         <p class="project-description">
-                            A gamified trading platform that integrates live stock market data with fantasy elements. Features include interactive option chain visualizations, portfolio risk modeling, and a VR trading interface that makes financial education engaging and accessible.
+                            • A gamified trading platform that integrates live stock market data with fantasy elements<br>
+                            • Features include interactive option chain visualizations and portfolio risk modeling<br>
+                            • Makes financial education engaging and accessible through VR trading interface<br>
+                            • Tech: Real-time Data Processing, Financial APIs, Visualization, Gamification
                         </p>
                         <div class="project-links">
                             <a href="https://github.com/Pree-om/Fintech_Gringotts_Trading_Pitch" target="_blank">
                                 <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="#">
-                                <i class="fas fa-external-link-alt"></i> Case Study
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Diabetes Prediction">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Diabetes Prediction System</h3>
-                        <p class="project-description">
-                            A machine learning model that predicts diabetes risk using health parameters like glucose levels, BMI, and age. The system employs advanced feature engineering and ensemble methods to provide personalized risk assessments.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/Pree-om/diabetes_prediction" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="#">
-                                <i class="fas fa-file-alt"></i> Research Paper
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Movie Recommendation">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Movie Recommendation System</h3>
-                        <p class="project-description">
-                            An ML-powered recommendation engine that suggests movies based on collaborative filtering and content-based analysis. The system achieves high user satisfaction by combining neural networks with traditional recommendation algorithms.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/Pree-om/movie-recommendation-ml" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="#">
-                                <i class="fas fa-external-link-alt"></i> Try It
                             </a>
                         </div>
                     </div>
@@ -1435,7 +1436,7 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- Education Section - UPDATED CGPA & DETAILS -->
     <section id="education" class="section">
         <div class="container">
             <div class="section-title">
@@ -1447,10 +1448,10 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3 class="education-degree">B.Tech in AI & Machine Learning</h3>
-                    <p class="education-institution">ITER, Siksha 'O' Anusandhan DU</p>
-                    <p class="education-duration"><i class="far fa-calendar-alt"></i> 2023 - Present</p>
-                    <p class="education-details">CGPA: 9.46 (Top 5% of University)<br>
-                    Coursework: Deep Learning, Neural Networks, Data Structures, Algorithms</p>
+                    <p class="education-institution">ITER, Siksha 'O' Anusandhan University</p>
+                    <p class="education-duration"><i class="far fa-calendar-alt"></i> 2023 – Present</p>
+                    <p class="education-details"><strong>CGPA: 9.44</strong> (Top 5% of University)<br>
+                    <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Operating Systems, Software Engineering, OOP, System Design</p>
                 </div>
                 <div class="education-card">
                     <div class="education-icon">
@@ -1458,8 +1459,8 @@
                     </div>
                     <h3 class="education-degree">Higher Secondary Education</h3>
                     <p class="education-institution">Fakir Mohan Higher Secondary School</p>
-                    <p class="education-duration"><i class="far fa-calendar-alt"></i> 2021 - 2023</p>
-                    <p class="education-details">First Division<br>
+                    <p class="education-duration"><i class="far fa-calendar-alt"></i> 2021 – 2023</p>
+                    <p class="education-details"><strong>1st Division</strong><br>
                     Specialization: Computer Science & Mathematics</p>
                 </div>
                 <div class="education-card">
@@ -1468,15 +1469,15 @@
                     </div>
                     <h3 class="education-degree">Matriculation</h3>
                     <p class="education-institution">St. James' Convent School</p>
-                    <p class="education-duration"><i class="far fa-calendar-alt"></i> 2009 - 2021</p>
-                    <p class="education-details">CGPA: 9.16/10<br>
+                    <p class="education-duration"><i class="far fa-calendar-alt"></i> 2009 – 2021</p>
+                    <p class="education-details"><strong>CGPA: 9.16/10</strong><br>
                     House Leader & Event Organizer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
+    <!-- Achievements Section - UPDATED WITH ALL HACKATHONS -->
     <section id="achievements" class="section">
         <div class="container">
             <div class="section-title">
@@ -1488,8 +1489,8 @@
                         <i class="fas fa-trophy"></i>
                     </div>
                     <div class="achievement-content">
-                        <h3>2nd Runners Up in Kodlama – 6-Hour Hackathon</h3>
-                        <p>Developed a web application that uses AI to identify and categorize household waste. The app provides suggestions for recycling and reusing items, promoting sustainability and reducing waste.</p>
+                        <h3>Winner – AKKI AI Hackathon</h3>
+                        <p>Led team to victory in AI-focused hackathon with innovative implementation of real-time video processing and alert system for women's safety.</p>
                     </div>
                 </div>
                 <div class="achievement-item">
@@ -1497,8 +1498,8 @@
                         <i class="fas fa-medal"></i>
                     </div>
                     <div class="achievement-content">
-                        <h3>Finalist in Hackfest Advaita (IIIT BBSR)</h3>
-                        <p>Created Fintech Gringotts Trading Simulator, a gamified platform that integrates live stock market data with fantasy elements to make financial education engaging and accessible.</p>
+                        <h3>Top 100 Finalist – MumbaiHacks (Asia's Largest Hackathon)</h3>
+                        <p>Selected among top 100 teams in Asia's largest hackathon powered by HCLTech, competing against 2000+ participants with Fintech Gringotts project.</p>
                     </div>
                 </div>
                 <div class="achievement-item">
@@ -1506,8 +1507,8 @@
                         <i class="fas fa-award"></i>
                     </div>
                     <div class="achievement-content">
-                        <h3>Top 10 in HackOverflow8.0 (NIT Durgapur)</h3>
-                        <p>Built SangRakshak, an advanced AI system that analyzes video footage in real-time to detect potential threats to women's safety, ranking in the top 10 among 120+ teams.</p>
+                        <h3>Second Runners-up – Kodlama (6-Hour Competitive Hackathon)</h3>
+                        <p>Developed AI-powered waste categorization system in 6 hours, securing 3rd position among 50+ competing teams.</p>
                     </div>
                 </div>
                 <div class="achievement-item">
@@ -1515,24 +1516,24 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <div class="achievement-content">
-                        <h3>60k+ Views on LeetCode Solutions</h3>
-                        <p>Consistently ranked in top 10% of problem solvers with optimized solutions in Python and Java. My explanations have helped thousands of developers prepare for technical interviews.</p>
+                        <h3>Finalist – Hackfest Advaita (IIIT Bhubaneswar)</h3>
+                        <p>Created Fintech Gringotts Trading Simulator, a gamified platform integrating live stock market data with fantasy elements for financial education.</p>
                     </div>
                 </div>
                 <div class="achievement-item">
                     <div class="achievement-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
                     <div class="achievement-content">
-                        <h3>Team Lead at Multiple Hackathons</h3>
-                        <p>Successfully led teams of 3-5 developers in high-pressure coding competitions, coordinating technical implementation while ensuring effective communication and task delegation.</p>
+                        <h3>Top 10 Finalist – HackOverflow 8.0 (NIT Durgapur)</h3>
+                        <p>Built SangRakshak AI system for women's safety, ranking in top 10 among 120+ teams with real-time video analysis capabilities.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - UPDATED -->
     <section id="contact" class="section">
         <div class="container">
             <div class="section-title">
@@ -1574,28 +1575,24 @@
                                 <a href="https://leetcode.com/u/PreeOm" target="_blank">leetcode.com/u/PreeOm</a>
                             </div>
                         </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <a href="tel:+919853224443">+91 9853224443</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-                    </form>
+                    <h3>Connect on WhatsApp</h3>
+                    <p>Let's discuss opportunities or collaborate on exciting projects! Click below to start a conversation on WhatsApp.</p>
+                    <a href="https://wa.me/919853224443?text=Hi%20Pree%20Om,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." 
+                       target="_blank" 
+                       class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
@@ -1605,7 +1602,7 @@
     <footer>
         <div class="container footer-content">
             <h3>PREE OM PRIYADARSHI</h3>
-            <p>AI/ML Engineer & Full Stack Developer</p>
+            <p>Software Development Engineer / Machine Learning Engineer</p>
             <div class="footer-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
@@ -1725,14 +1722,6 @@
             
             document.querySelectorAll('.about-content, .timeline-item, .project-card, .education-card, .achievement-item, .contact-card, .contact-form').forEach(el => {
                 observer.observe(el);
-            });
-            
-            // Simple form handling
-            const contactForm = document.getElementById('contactForm');
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
             });
         });
     </script>
